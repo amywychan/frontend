@@ -1,0 +1,132 @@
+.responsiveImg {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+}
+
+#header{
+  margin: 0 auto; 
+  left: 0; right: 0;
+  height: 230px;
+}
+
+#title{
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 3vw;
+  color:rgba(255, 0, 0, 0.589);
+}
+
+.mainView{
+  margin-top: 0px;
+  position: static;
+}
+
+
+.mainContent {
+  position: fixed;
+  top: 250px;
+  bottom: 40px;
+  width: 100%;
+  margin: 0 auto; 
+  left: 0; right: 0;
+  overflow-y: scroll;
+  background-image: url("https://images.pexels.com/photos/1108297/pexels-photo-1108297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#menuButton{
+  color:white !important;
+  background-color:red;
+  position: fixed;
+  top: 250px;
+}
+
+/deep/.mat-tab-label, /deep/.mat-tab-label-active {
+  width: 20% !important;
+}
+
+.mat-tab-group {
+  margin-top: 10px;
+  width: 100% !important;
+}
+
+.toolbar{
+  margin: 0 !important;
+  color: rgba(126, 26, 26, 0.87) !important;
+  background-color:white !important;
+  text-align:center !important;
+
+  position: sticky;
+}
+
+.destinationsImg{
+  width:100%;
+  height:auto;
+}
+
+.example-button-toggle-label {
+  display: inline-block;
+  margin: 16px;
+}
+
+.mat-cell, .mat-footer-cell, th.mat-header-cell {
+    text-align: center !important;
+    padding: 0 !important;
+}
+
+
+.mat-tab-label-content {
+    padding: 0 8px;
+  }
+.mat-tab-label-content > div {
+    line-height: 40px;
+  }
+
+.card-block {
+    max-width: 800px;
+    margin: 0 auto; 
+    left: 0; right: 0;
+    margin-top:20px;
+    padding: 20px;
+  }
+
+.likeButton{
+  float: left !important;
+  width: 50% !important;
+  margin-right: 10px!important;
+}
+
+.linkButton {
+  float: right !important;
+  width: 20% !important;
+  margin-left: 10px!important;
+}
+
+.mapButton{
+  float: right !important;
+  width: 20% !important;
+  font-size: 1em;
+}
+
+.footnote {
+  position: fixed;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  background-color:red;
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+  font-size: 0.7em
+
+}
+
+#externalLink {
+  color: white !important;
+}
+
+a:hover{
+  text-decoration: none;
+}
+

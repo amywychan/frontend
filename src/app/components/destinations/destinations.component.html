@@ -1,0 +1,61 @@
+<div class="mainView container-fluid">
+    <div class="container-fluid">
+            <div id="header">
+                <a href="/destinations"><img class="responsiveImg" src="https://8u1svq.dm.files.1drv.com/y4myMNgJjX6jTiMiS-NnC8j92UvBLF85zh4z9NFOOk9vIF3xxFeW5Z8wDFj1tsvldkBGQKqxXKuZTTsjUgLfw9pizV-nBavGHpP5IalVnX5BU7GWN6JYHJijUm5adZKiC0q_lXpa0Rur6xjDkxdxjfmURIeRQnMNFnhPOW6nLYD0CpYFFhjcmRmnpxJEMpmvWvHrint7pKUZqfkLHlTwY_p_A?width=2300&height=1034&cropmode=none"/></a>
+                  <mat-tab-group [selectedIndex]="selected.value" [color]="Primary" [backgroundColor]="Primary" (selectedTabChange)="onLinkClick($event)" >
+                      <mat-tab *ngFor="let tab of tabsData; let index = index" [label]="tab"></mat-tab>
+                  </mat-tab-group>
+                </div>
+              </div>
+
+        <div class="mainContent scrollbar scrollbar-primary" >
+            <div class="force-overflow"></div>
+        <div class="card card-block"
+             *ngFor="let element of destinations">
+              <h4 class="card-title">{{element.name}}</h4>
+              <img class="destinationsImg" src={{element.imagePath}}>
+            <p class="card-text">{{element.description}}</p>
+            <p>
+              <button mat-raised-button color="warn"
+                (click)=
+                "like(element.prefectures,element._id);"
+                matBadge={{element.likeCount}} matBadgePosition="after" matBadgeColor="accent"
+                class="likeButton">
+                Like
+              </button>
+              <a id="externalLink" href="{{element.link}}" target="_blank">
+              <button mat-raised-button color="primary" class="linkButton">
+                  Link 
+                </button>
+              </a>
+                <a id="externalLink" href="{{element.mapLink}}" target="_blank">
+                <button mat-raised-button color="primary" class="mapButton">
+                    Map
+                </button>
+              </a>
+            </p>
+        </div>
+        </div>
+      </div>
+
+          <div class="sticky">
+              <button mat-button [matMenuTriggerFor]="menu" id="menuButton">Menu</button>
+              <mat-menu #menu="matMenu">
+                  <button mat-menu-item [matMenuTriggerFor]="externalLink">External Link</button>
+                  <button mat-menu-item [matMenuTriggerFor]="contactMe">Contact Me</button>
+                </mat-menu>
+                <mat-menu #contactMe="matMenu">
+                  <a href="http://www.linkedin.com/in/wing-yi-chan-4b7528100" target="_blank"><button mat-menu-item><i class="fab fa-linkedin fa-2x"></i>  LinkedIn</button></a>
+                  <a href="mailto:amywingyicahn@gmail.com"><button mat-menu-item><i class="fas fa-envelope-square fa-2x"></i>  Email</button></a>
+                  <a href="https://www.instagram.com/amywingyichan" target="_blank"><button mat-menu-item><i class="fab fa-instagram fa-2x"></i>  Instagram</button></a>
+                </mat-menu>
+                <mat-menu #externalLink="matMenu">
+                    <a href="https://www.polyu.edu.hk/" target="_blank"><button mat-menu-item>HK PolyuU</button></a>
+                    <a href="https://www.comp.polyu.edu.hk/"><button mat-menu-item>POLYU COMP</button></a>
+                    <a href="http://www2.comp.polyu.edu.hk/~18007119g/" target="_blank"><button mat-menu-item>My Personal Website</button></a>
+                  </mat-menu>
+          </div>
+
+          <div class="footnote">
+             Final project for COMP5321. Power by Amy Chan 2018
+      </div>
